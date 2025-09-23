@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medlink Clinic - Expert Medico-Legal Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('download (1).jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-bg {
+             background-color: #f8fafc;
+        }
+        .footer-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
+        }
+        .process-card::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: -50%;
+            width: 100%;
+            height: 2px;
+            background: #e5e7eb;
+            z-index: -1;
+        }
+        .process-card:first-child::before {
+            content: none;
+        }
+
+        @media (max-width: 768px) {
+            .process-card::before {
+                top: -25%;
+                left: 38px;
+                width: 2px;
+                height: 50%;
+             }
+        }
+        
+        /* Animation Styles */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Top Contact Bar -->
+    <div class="bg-gray-800 text-white text-sm">
+        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <a href="tel:+27650760020" class="flex items-center space-x-2 hover:text-green-400 transition-colors">
+                    <i class="fas fa-phone"></i>
+                    <span>+27 65 076 0020</span>
+                </a>
+                <a href="mailto:medlinkclinic00@gmail.com" class="flex items-center space-x-2 hover:text-green-400 transition-colors">
+                    <i class="fas fa-envelope"></i>
+                    <span>medlinkclinic00@gmail.com</span>
+                </a>
+            </div>
+            <div class="hidden md:block">
+                <span>Office 310, Premium Towers, Pretoria Central</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#home" class="flex items-center">
+                <img src="medlinklogo.jpg" alt="Medlink Clinic Logo" class="h-20 w-auto">
+            </a>
+            <div class="hidden md:flex space-x-8 items-center font-medium text-gray-600">
+                <a href="#home" class="hover:text-blue-600 transition duration-300">Home</a>
+                <a href="#about" class="hover:text-blue-600 transition duration-300">About Us</a>
+                <a href="#services" class="hover:text-blue-600 transition duration-300">Services</a>
+                <a href="#process" class="hover:text-blue-600 transition duration-300">Our Process</a>
+                <a href="#network" class="hover:text-blue-600 transition duration-300">Our Network</a>
+                <a href="#contact" class="bg-green-500 text-white px-5 py-2 rounded-full hover:bg-green-600 transition duration-300 shadow-sm">Contact Us</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl text-blue-700"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600">Home</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">About Us</a>
+            <a href="#services" class="block py-2 text-gray-600 hover:text-blue-600">Services</a>
+            <a href="#process" class="block py-2 text-gray-600 hover:text-blue-600">Our Process</a>
+            <a href="#network" class="block py-2 text-gray-600 hover:text-blue-600">Our Network</a>
+            <a href="#contact" class="block mt-2 bg-green-500 text-white px-5 py-2 rounded-full hover:bg-green-600 transition duration-300 text-center">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg text-white h-[calc(100vh-120px)] min-h-[600px] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 fade-in-up">Expert Medico-Legal Solutions</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200 fade-in-up" style="transition-delay: 0.2s;">Delivering comprehensive, research-based reports and consulting services with integrity and professionalism.</p>
+                <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg fade-in-up" style="transition-delay: 0.4s;">Contact Us</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-16">
+                    <div class="md:w-5/12 animated-element fade-in-up">
+                        <img src="download1.png" alt="Medico-Legal Consultation" class="rounded-lg shadow-2xl">
+                    </div>
+                    <div class="md:w-7/12 animated-element fade-in-up">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Who We Are</h2>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                           Medlink Clinic is a 100% black owned and managed Human Consulting Company based in Pretoria,
+South Africa. Our business activities are focused on Human Resources Consulting, Medico Legal 
+services, Psychometric Assessments, Career Guidance and are not restricted in nature.
+We are a young company looking to push the boundaries of excellence and committed to 
+delivering exceptional service to its clients. Our clients experience special treatment from our team 
+due to our company being small medium enterprise.
+<br><br><br><br><br>
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 text-green-500 text-3xl"><i class="fas fa-award"></i></div>
+                                <div>
+                                    <h4 class="text-lg font-semibold">Improve Quality</h4>
+                                    <p class="text-gray-500">We ensure all our experts have undertaken accredited Medicolegal Training, with all new experts undertaking the Bond Solon Medical Expect Training Courses.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 text-green-500 text-3xl"><i class="fas fa-comments"></i></div>
+                                <div>
+                                    <h4 class="text-lg font-semibold">Ease Communication</h4>
+                                    <p class="text-gray-500">It can be challenging for Solicitors to communicate with Medical Experts. Think Medicolegal provides a single point of contact between both.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 text-green-500 text-3xl"><i class="fas fa-piggy-bank"></i></div>
+                                <div>
+                                    <h4 class="text-lg font-semibold">Reduce Cost</h4>
+                                    <p class="text-gray-500">As government legislation tightens and linkage increases, there is an overall need to reduce litigation costs.We remove traditional intermediary fees.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 text-green-500 text-3xl"><i class="fas fa-sitemap"></i></div>
+                                <div>
+                                    <h4 class="text-lg font-semibold">Reduce Complexity</h4>
+                                    <p class="text-gray-500">We make the process of instructing an expect a simple ,repeatable process, with our bespoke case management system.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section id="services" class="section-bg py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 animated-element fade-in-up">
+                    <h2 class="text-3xl font-bold text-gray-800">Our Medico-Legal Services</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">A comprehensive suite of services to support all your medico-legal needs.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 animated-element fade-in-up">
+                        <div class="text-blue-600 mb-4"><i class="fas fa-network-wired fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Network Management</h3>
+                        <p class="text-gray-600">We manage a large, qualified, and accredited network of medico-legal experts with years of experience.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 animated-element fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="text-blue-600 mb-4"><i class="fas fa-gavel fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Expert Witness</h3>
+                        <p class="text-gray-600">Providing expert witnesses and delivering timeous, high-quality, and objective medical reports.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 animated-element fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="text-blue-600 mb-4"><i class="fas fa-file-medical fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Records Management</h3>
+                        <p class="text-gray-600">Includes tracking, validating, sorting, digitizing, and quality checking of medical records.</p>
+                    </div>
+                     <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 animated-element fade-in-up">
+                        <div class="text-blue-600 mb-4"><i class="fas fa-users-cog fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Medical Reports</h3>
+                        <p class="text-gray-600">Expert consulting,accurate assessments..</p>
+                    </div>
+                     <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 animated-element fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="text-blue-600 mb-4"><i class="fas fa-tasks fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Quality Check</h3>
+                        <p class="text-gray-600">Our experts handle assessment of all medical reports.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 animated-element fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="text-blue-600 mb-4"><i class="fas fa-balance-scale fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Litigation Support</h3>
+                        <p class="text-gray-600">Full support for legal proceedings including pre-trial meetings and court attendance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Process Section -->
+        <section id="process" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 animated-element fade-in-up">
+                    <h2 class="text-3xl font-bold text-gray-800">Our Medico-Legal Process</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">A clear and structured approach to ensure efficiency and quality at every step.</p>
+                </div>
+                <div class="relative grid grid-cols-1 md:grid-cols-4 gap-x-12 gap-y-20">
+                    <div class="process-card relative flex flex-col items-center text-center animated-element fade-in-up">
+                        <div class="w-20 h-20 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold border-4 border-white shadow-lg">01</div>
+                        <h3 class="text-lg font-semibold mt-6 mb-2">Instruction & Consultation</h3>
+                        <p class="text-gray-500 text-sm">Receive instructions from attorneys and conduct an initial consultation to define case requirements.</p>
+                    </div>
+                    <div class="process-card relative flex flex-col items-center text-center animated-element fade-in-up" style="transition-delay: 0.15s;">
+                        <div class="w-20 h-20 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold border-4 border-white shadow-lg">02</div>
+                        <h3 class="text-lg font-semibold mt-6 mb-2">Assessment & Expert Sourcing</h3>
+                        <p class="text-gray-500 text-sm">Assess the case and source the most suitable expert from our extensive, accredited network.</p>
+                    </div>
+                    <div class="process-card relative flex flex-col items-center text-center animated-element fade-in-up" style="transition-delay: 0.3s;">
+                        <div class="w-20 h-20 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold border-4 border-white shadow-lg">03</div>
+                        <h3 class="text-lg font-semibold mt-6 mb-2">Reporting & Quality Check</h3>
+                        <p class="text-gray-500 text-sm">The expert conducts their assessment and prepares a report, which undergoes a rigorous quality check.</p>
+                    </div>
+                    <div class="process-card relative flex flex-col items-center text-center animated-element fade-in-up" style="transition-delay: 0.45s;">
+                        <div class="w-20 h-20 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold border-4 border-white shadow-lg">04</div>
+                        <h3 class="text-lg font-semibold mt-6 mb-2">Final Delivery & Support</h3>
+                        <p class="text-gray-500 text-sm">The final, quality-assured report is delivered, with ongoing support available for litigation processes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialist Network Section -->
+        <section id="network" class="section-bg py-24">
+            <div class="container mx-auto px-6 animated-element fade-in-up">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-800">Our Specialist Network</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Access to a wide range of experts across numerous fields to meet your specific case needs.</p>
+                </div>
+                <div class="bg-white p-8 sm:p-12 rounded-lg shadow-md">
+                    <ul class="columns-2 sm:columns-3 lg:columns-4 gap-x-8 text-gray-600">
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Actuary</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Anaesthesiologist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Architect</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Audiologist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Bio kinetics</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Cardiologist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Cardiothoracic Surgeon</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Chiropractor</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Clinical Psychologist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Colorectal Surgeon</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Dentist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Dermatologist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>ENT Surgeon</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Educational Psychologist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Gynaecologist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Industrial Psychologist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Maxillo-Facial Surgeon</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Midwife Nurse</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Neonatologist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Neurologist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Occupational Therapist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Ophthalmologist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Orthopedic Surgeon</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Paediatrician</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Physiotherapist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Plastic Surgeon</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Psychiatrist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Radiologist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Speech Therapist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Urologist</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>And many more...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+         <!-- Map Section is removed from here -->
+
+    </main>
+    
+    <!-- Footer / Contact -->
+    <footer id="contact" class="footer-bg text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="mb-8">
+                        <a href="#home" class="flex items-center space-x-2 mb-4">
+                            <img src="medlinklogo.jpg" alt="Medlink Clinic Logo" class="h-16 w-auto brightness-0 invert">
+                        </a>
+                        <p class="text-gray-300 max-w-md">A 100% black owned and managed Human Consulting Company focused on Medico-Legal services, HR Consulting, and more.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4 uppercase tracking-wider">Quick Links</h4>
+                             <ul class="space-y-2 text-gray-300">
+                                <li><a href="#about" class="hover:text-white">About Us</a></li>
+                                <li><a href="#services" class="hover:text-white">Services</a></li>
+                                <li><a href="#process" class="hover:text-white">Our Process</a></li>
+                                <li><a href="#network" class="hover:text-white">Our Network</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4 uppercase tracking-wider">Contact</h4>
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-start space-x-3">
+                                    <i class="fas fa-map-marker-alt mt-1 text-white"></i>
+                                    <span>Office 310, Premium Towers, Pretoria Central, SA</span>
+                                </li>
+                                 <li class="flex items-start space-x-3">
+                                    <i class="fas fa-phone mt-1 text-white"></i>
+                                    <span>+27 65 076 0020</span>
+                                </li>
+                                 <li class="flex items-start space-x-3">
+                                    <i class="fas fa-envelope mt-1 text-white"></i>
+                                    <span>medlinkclinic00@gmail.com</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="animated-element fade-in-up h-full min-h-[300px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2264.378422846315!2d28.19182617734774!3d-25.747315127197158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spremium%20towers%20pretoria!5e0!3m2!1sen!2sza!4v1758641668493!5m2!1sen!2sza" class="w-full h-full rounded-lg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-600 pt-6 text-center text-gray-400">
+                <p>&copy; 2024 Medlink Clinic. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const header = document.getElementById('header');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('#mobile-menu a, nav a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    if (e.currentTarget.href.includes('#')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    header.classList.add('shadow-lg', 'bg-white/95');
+                } else {
+                    header.classList.remove('shadow-lg', 'bg-white/95');
+                }
+            });
+
+            // Scroll Animation Logic
+            const animatedElements = document.querySelectorAll('.animated-element, .hero-bg .fade-in-up');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+</html>
+
